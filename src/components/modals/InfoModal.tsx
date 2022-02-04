@@ -11,7 +11,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     <BaseModal title="Como jugar" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Tienes 6 intentos para adivinar la palabra (incluye ciudades, comunas, modismos y otras expresiones y formas de hablar típicas chilenas ej: "PASAO en vez de PASADO").
-        <br/>Despuás de cada intento cada celda cambiará según que tan cerca estuviste.
+        <br/>Después de cada intento cada celda cambiará según que tan cerca estuviste.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
