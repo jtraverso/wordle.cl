@@ -23,10 +23,10 @@ export const Key = ({
     {
       'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
         !status,
-      'bg-slate-400 text-white': status === 'absent',
+      'bg-red-500 dark:bg-red-700 text-white border-red-400 dark:border-red-700': status === 'absent',
       'bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white':
         status === 'correct',
-      'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 dark:bg-orange-700 text-white':
+      'bg-green-500 hover:bg-green-600 active:bg-green-700 dark:bg-green-700 text-white':
         status === 'present',
     }
   )
