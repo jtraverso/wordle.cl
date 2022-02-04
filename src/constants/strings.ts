@@ -1,5 +1,4 @@
-export const GAME_TITLE = '<p style="color:red">W</p><p style="color:blue">O</p>R<p style="color:ref">D</p><p style="color:blue">L</p>E<p style="color:red">.</p><p style="color:red">C</p><p style="color:blue">L</p>'
-
+export const GAME_TITLE = 'WORDLE.CL'
 export const WIN_MESSAGES = ['Excelente!', 'Increible!', 'Bien Hecho!', 'Eres Formidable!', 'Sec@!','Bakan!','La Raja!' ]
 export const GAME_COPIED_MESSAGE = 'Copiado al portapeles'
 export const ABOUT_GAME_MESSAGE = 'Acerca de este juego'
