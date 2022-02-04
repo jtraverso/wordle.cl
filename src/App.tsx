@@ -43,7 +43,7 @@ const useGAEventsTracker = (category = 'Event Category') => {
   }
 }
   
-  const eventTracker = trackEvent("Link triggered");
+const eventTracker = trackEvent("Link triggered")
 
 function App() {
   const prefersDarkMode = window.matchMedia(
