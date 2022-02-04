@@ -24,13 +24,11 @@ export const Key = ({
       'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
         !status,
       'bg-red-500 dark:bg-red-700 text-white border-red-400 dark:border-red-700': status === 'absent',
-      'bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white':
-        status === 'correct',
-      'bg-green-500 hover:bg-green-600 active:bg-green-700 dark:bg-green-700 text-white':
-        status === 'present',
+      'bg-green-500 dark:bg-green-700 text-white border-green-500 dark:border-green-700': status === 'correct',
+      'bg-blue-500 dark:bg-blue-700 text-white border-blue-500 dark:border-blue-700': status === 'present',
     }
   )
-
+  
   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
     onClick(value)
     event.currentTarget.blur()
