@@ -20,7 +20,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
        Basdo en -{' '}
         <a
-          href="https://github.com/hannahcode/GAME"
+          "href="https://github.com/hannahcode/GAME"
           className="underline font-bold"
         >
           revisa el código aquí
