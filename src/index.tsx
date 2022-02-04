@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
