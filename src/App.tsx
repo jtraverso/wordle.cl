@@ -31,7 +31,7 @@ import './App.css'
 
 import ReactGA from 'react-ga'
 
-ReactGA.initialize('G-GR99QS3PLS');
+ReactGA.initialize('G-GR99QS3PLS')
 
 const ALERT_TIME_MS = 2000
 
@@ -72,6 +72,10 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   useEffect(() => {
     if (isDarkMode) {
