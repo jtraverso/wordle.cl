@@ -35,16 +35,6 @@ ReactGA.initialize('G-GR99QS3PLS')
 
 const ALERT_TIME_MS = 2000
 
-const useGAEventsTracker = (category = 'Event Category') => {
-  
-  const trackEvent = (action = 'action', label = 'label') => {
-    ReactGA.event(category, action, label)
-    return trackEvent
-  }
-}
-  
-const eventTracker = trackEvent("Link triggered")
-
 function App() {
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
