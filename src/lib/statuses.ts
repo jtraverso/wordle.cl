@@ -22,6 +22,7 @@ export type CharValue =
   | 'J'
   | 'K'
   | 'L'
+  | 'Ñ'
   | 'Z'
   | 'X'
   | 'C'
