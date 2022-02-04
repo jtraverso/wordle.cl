@@ -73,6 +73,16 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
   
+  const useGAEventsTracker = (category = 'Event Category') => {
+  
+  const trackEvent = (action = 'action', label = 'label') => {
+      ReactGA.event(category, action, label)
+      return trackEvent
+  }
+}
+  
+  const eventTracker = trackEvent("Link triggered");
+  
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
