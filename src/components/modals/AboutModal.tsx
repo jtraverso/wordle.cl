@@ -18,7 +18,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
       </p>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-       Basdo en -{' '}
+       Basado en -{' '}
         <a
           href="https://github.com/hannahcode/GAME"
           className="underline font-bold"
