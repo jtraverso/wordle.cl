@@ -10,7 +10,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Tienes 6 intentos para adivinar la palabra (incluye ciudades, comunas, modismos y otras expresiones típicas chilenas.
+        Tienes 6 intentos para adivinar la palabra (incluye ciudades, comunas, modismos y otras expresiones y formas de hablar típicas chilenas ej: "PASAO en vez de PASADO").
         Despuess de cada intento cada celda cambiará según que tan cerca estuviste.
       </p>
 
