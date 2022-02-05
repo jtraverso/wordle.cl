@@ -6,7 +6,7 @@ import {
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
-import { useLocation } from "react-router-dom"
+// import { useLocation } from "react-router-dom"
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
