@@ -33,7 +33,7 @@ const ALERT_TIME_MS = 2000
 
 function App() {
   
-  useGaTracker()
+  const tracker = useGaTracker()
   
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
