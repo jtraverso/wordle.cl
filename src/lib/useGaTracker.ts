@@ -9,7 +9,7 @@ const useGaTracker = () => {
   useEffect(() => {
     ReactGA.initialize("G-GR99QS3PLS")
     setInitialized(true)
-    }, [setInitialized])
+    }, [])
  
   useEffect(() => {
     if (initialized) {
