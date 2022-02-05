@@ -33,11 +33,12 @@ import './App.css'
 const ALERT_TIME_MS = 2000
 
 function App() {
+  usePageTracking()
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
 
-  const ga = usePageTracking()
+  
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
