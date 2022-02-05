@@ -73,11 +73,9 @@ function App() {
   
   const location = useLocation()
 
-  useEffect(() => {
-    ReactGA.initialize('G-GR99QS3PLS')
-    ReactGA.pageview(location.pathname + location.search)
-  },[location])
-  
+  ReactGA.initialize('G-GR99QS3PLS')
+  ReactGA.pageview(location.pathname + location.search)
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
