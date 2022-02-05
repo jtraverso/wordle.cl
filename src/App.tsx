@@ -73,7 +73,7 @@ function App() {
   
   useEffect(() => {
     ga()
-  }, [ga])
+  }
   
   useEffect(() => {
     if (isDarkMode) {
