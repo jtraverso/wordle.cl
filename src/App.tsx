@@ -33,7 +33,6 @@ import './App.css'
 const ALERT_TIME_MS = 2000
 
 function App() {
-  usePageTracking()
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
@@ -71,7 +70,11 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
-
+  
+  useEffect(() => {
+    usePageTracking()
+  }, [])
+  
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
