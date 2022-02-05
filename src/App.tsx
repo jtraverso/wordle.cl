@@ -33,6 +33,8 @@ const ALERT_TIME_MS = 2000
 
 function App() {
   
+  this.useGaTracker()
+  
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
@@ -151,7 +153,6 @@ function App() {
   }
 
   return (
-    <{useGaTracker} />
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8 mt-12">
         <h1 className="text-xl grow font-bold dark:text-white">{GAME_TITLE}</h1>
