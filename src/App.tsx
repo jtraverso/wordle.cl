@@ -36,6 +36,7 @@ function App() {
     '(prefers-color-scheme: dark)'
   ).matches
 
+  const ga = usePageTracking()
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
