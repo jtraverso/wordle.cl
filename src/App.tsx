@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom'
 import {
   InformationCircleIcon,
   ChartBarIcon,
@@ -30,8 +31,6 @@ import {
 import './App.css'
 
 const ALERT_TIME_MS = 2000
-
-import { useLocation } from "react-router-dom"
 
 export default function useGoogleAnalytics() {
   const location = useLocation()
