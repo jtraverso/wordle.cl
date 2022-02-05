@@ -3,6 +3,7 @@ import {
   InformationCircleIcon,
   ChartBarIcon,
   SunIcon,
+  MoonIcon,
 } from '@heroicons/react/outline'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
