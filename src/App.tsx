@@ -1,17 +1,18 @@
+import { useState, useEffect } from 'react'
+import ReactGA from "react-ga"
 import {
   InformationCircleIcon,
   ChartBarIcon,
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
-import { useState, useEffect } from 'react'
+import { useLocation } from "react-router-dom"
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
 import { AboutModal } from './components/modals/AboutModal'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
-import { usePageTracking } from './lib/usePageTracking'
 import {
   GAME_TITLE,
   WIN_MESSAGES,
@@ -68,11 +69,11 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
-  
-  const ga = usePageTracking()
-  
+ 
   useEffect(() => {
-    ga()
+    const location = useLocation()
+    ReactGA.initialize("G-GR99QS3PLS")
+    ReactGA.pageview(location.pathname + location.search)
   },[])
   
   useEffect(() => {
