@@ -74,7 +74,7 @@ function App() {
  
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search)
-  },[]
+  },[])
 
   
   useEffect(() => {
