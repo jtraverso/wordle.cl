@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import ReactGA from "react-ga"
 import {
   InformationCircleIcon,
   ChartBarIcon,
@@ -30,10 +29,34 @@ import {
 import './App.css'
 
 const ALERT_TIME_MS = 2000
-ReactGA.initialize('G-GR99QS3PLS')
-ReactGA.pageview(window.location.pathname + window.location.search)
 
-function App() {
+//import ReactGA from "react-ga"
+//ReactGA.initialize('G-GR99QS3PLS')
+//ReactGA.pageview(window.location.pathname + window.location.search)
+
+import { useLocation } from "react-router-dom"
+ 
+import analytics from "./lib/analytics"
+ 
+export default function useGoogleAnalytics() {
+  const location = useLocation()
+ 
+  React.useEffect(() => {
+    analytics.init()
+  }, [])
+ 
+  React.useEffect(() => {
+    const currentPath = location.pathname + location.search
+    analytics.sendPageview(currentPath)
+  }, [location])
+}
+
+
+
+
+function Routes() {
+  
+  useGoogleAnalytics()
   
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
@@ -227,4 +250,11 @@ function App() {
   )
 }
 
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  )
+}
 export default App
