@@ -30,10 +30,6 @@ import './App.css'
 
 const ALERT_TIME_MS = 2000
 
-//import ReactGA from "react-ga"
-//ReactGA.initialize('G-GR99QS3PLS')
-//ReactGA.pageview(window.location.pathname + window.location.search)
-
 import { useLocation } from "react-router-dom"
  
 import analytics from "./lib/analytics"
@@ -50,9 +46,6 @@ export default function useGoogleAnalytics() {
     analytics.sendPageview(currentPath)
   }, [location])
 }
-
-
-
 
 function Routes() {
   
