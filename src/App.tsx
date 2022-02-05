@@ -22,6 +22,7 @@ import {
 } from './constants/strings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import analytics from './lib/analytics'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
@@ -31,9 +32,7 @@ import './App.css'
 const ALERT_TIME_MS = 2000
 
 import { useLocation } from "react-router-dom"
- 
-import analytics from "./lib/analytics"
- 
+
 export default function useGoogleAnalytics() {
   const location = useLocation()
  
