@@ -72,7 +72,7 @@ function App() {
   const gaPageTracking = usePageTracking()
   
   useEffect(() => {
-    gaPageTracking()
+    gaPageTracking
   }, [gaPageTracking])
   
   useEffect(() => {
