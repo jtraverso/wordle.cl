@@ -69,12 +69,18 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
+  const [initialized, setInitialized] = useState(false)
   
-  ReactGA.initialize("G-GR99QS3PLS") 
+  useEffect(() => {
+    ReactGA.initialize("G-GR99QS3PLS")
+    setInitialized(true)
+    }, [setInitialized])
  
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  },[])
+    if (initialized) {
+      ReactGA.pageview(window.location.pathname + window.location.search)
+    }
+  },[initialized])
 
   
   useEffect(() => {
