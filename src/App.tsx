@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom'
+//import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom'
 import {
   InformationCircleIcon,
   ChartBarIcon,
@@ -23,7 +23,7 @@ import {
 } from './constants/strings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
-import analytics from './lib/analytics'
+//import analytics from './lib/analytics'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
@@ -45,9 +45,9 @@ export default function useGoogleAnalytics() {
   }, [location])
 }
 
-function Routes() {
+function App() {
   
-  useGoogleAnalytics()
+  //useGoogleAnalytics()
   
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
@@ -238,14 +238,6 @@ function Routes() {
         variant="success"
       />
     </div>
-  )
-}
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
   )
 }
 export default App
