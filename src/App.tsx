@@ -69,11 +69,9 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
   
-  const gaPageTracking = usePageTracking()
-  
   useEffect(() => {
-    gaPageTracking
-  }, [gaPageTracking])
+    usePageTracking()
+  }, [usePageTracking])
   
   useEffect(() => {
     if (isDarkMode) {
