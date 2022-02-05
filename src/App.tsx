@@ -72,6 +72,10 @@ function App() {
 
   ReactGA.initialize('G-GR99QS3PLS')
   ReactGA.pageview(window.location.pathname + window.location.search)
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   useEffect(() => {
     if (isDarkMode) {
