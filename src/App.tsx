@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
-import ReactGA from "react-ga"
 import {
   InformationCircleIcon,
   ChartBarIcon,
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
-// import { useLocation } from "react-router-dom"
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -24,6 +22,7 @@ import {
 } from './constants/strings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import useGaTracker from './lib/useGaTracker'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
@@ -33,6 +32,9 @@ import './App.css'
 const ALERT_TIME_MS = 2000
 
 function App() {
+  
+  useGaTracker()
+  
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
@@ -69,19 +71,6 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
-  const [initialized, setInitialized] = useState(false)
-  
-  useEffect(() => {
-    ReactGA.initialize("G-GR99QS3PLS")
-    setInitialized(true)
-    }, [setInitialized])
- 
-  useEffect(() => {
-    if (initialized) {
-      ReactGA.pageview(window.location.pathname + window.location.search)
-    }
-  },[initialized])
-
   
   useEffect(() => {
     if (isDarkMode) {
