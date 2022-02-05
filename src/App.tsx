@@ -69,7 +69,7 @@ function App() {
 
   const [stats, setStats] = useState(() => loadStats())
   
-  const { ga } = usePageTracking()
+  const ga = usePageTracking()
   const ga-tracking = useRef(ga)
   
   useEffect(() => {
