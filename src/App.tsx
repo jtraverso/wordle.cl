@@ -31,10 +31,7 @@ import './App.css'
 
 const ALERT_TIME_MS = 2000
 ReactGA.initialize('G-GR99QS3PLS')
-
-useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-}, [])
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 function App() {
   
