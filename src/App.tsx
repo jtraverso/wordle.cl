@@ -36,7 +36,6 @@ function App() {
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
-
   
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWon, setIsGameWon] = useState(false)
@@ -76,7 +75,7 @@ function App() {
   
   useEffect(() => {
     ga-tracking.current()
-  }, [])
+  }, [ga-tracking])
   
   useEffect(() => {
     if (isDarkMode) {
