@@ -27,7 +27,6 @@ import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
 } from './lib/localStorage'
-
 import './App.css'
 
 const ALERT_TIME_MS = 2000
