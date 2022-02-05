@@ -84,7 +84,6 @@ function App() {
       ReactGA.pageview(location.pathname + location.search)
     }
   },[initialized, location])
-}
   
   useEffect(() => {
     if (isDarkMode) {
