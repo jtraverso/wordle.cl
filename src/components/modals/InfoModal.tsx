@@ -5,6 +5,19 @@ type Props = {
   isOpen: boolean
   handleClose: () => void
 }
+  
+ const adsense-horizontal-script = `
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836"vcrossorigin="anonymous"></script>
+    <!-- Wordle - Responsive - Horizontal -->
+ <ins class="adsbygoogle"
+   style="display:block"
+   data-ad-client="ca-pub-2955738892636836"
+   data-ad-slot="3599962958"
+   data-ad-format="auto"
+   data-full-width-responsive="true">
+  </ins>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`
+ adsense-horizontal-script.async = true
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
@@ -47,5 +60,6 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         La letra C no está en la palabra.
       </p>
     </BaseModal>
+    document.body.appendChild(adsense-horizontal-script);
   )
 }
