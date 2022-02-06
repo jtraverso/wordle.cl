@@ -1,4 +1,4 @@
-import AdSense from 'react-adsense';
+import AdSense from 'react-adsense'
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
 
