@@ -1,7 +1,9 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
 
- const adsenseHorizontalScript = `
+ const adsenseHorizontalScript = document.createElement("script")
+ adsenseHorizontalScript.async = true
+ adsenseHorizontalScript.text = `
  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836" crossorigin="anonymous"></script>
     <!-- Wordle - Responsive - Horizontal -->
  <ins class="adsbygoogle"
@@ -12,8 +14,6 @@ import { BaseModal } from './BaseModal'
    data-full-width-responsive="true">
   </ins>
  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`
- 
-adsenseHorizontalScript.async = true
 
 type Props = {
   isOpen: boolean
