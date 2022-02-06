@@ -6,8 +6,8 @@ type Props = {
   handleClose: () => void
 }
   
- const adsense-horizontal-script = `
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836"vcrossorigin="anonymous"></script>
+ const adsenseHorizontalScript = `
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836" crossorigin="anonymous"></script>
     <!-- Wordle - Responsive - Horizontal -->
  <ins class="adsbygoogle"
    style="display:block"
@@ -17,7 +17,7 @@ type Props = {
    data-full-width-responsive="true">
   </ins>
  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`
- adsense-horizontal-script.async = true
+ adsenseHorizontalScript.async = true
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
