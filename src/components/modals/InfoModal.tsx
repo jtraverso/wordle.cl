@@ -1,3 +1,4 @@
+import AdSense from 'react-adsense';
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
 
@@ -60,8 +61,14 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
         La letra C no está en la palabra.
       </p>
-      <div className="adsense-modal-horizontal">
-      </div>
+      <AdSense.Google
+        client='ca-pub-2955738892636836'
+        slot='3599962958'
+        style={{ display: 'block' }}
+        format='auto'
+        responsive='true'
+        layoutKey='-gw-1+2a-9x+5c'
+      />
     </BaseModal>
   )
 }
