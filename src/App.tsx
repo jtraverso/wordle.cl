@@ -31,7 +31,7 @@ import {
 import './App.css'
 
 const ALERT_TIME_MS = 2000
-
+/*
 export default function useGoogleAnalytics() {
   const location = useLocation()
  
@@ -44,7 +44,7 @@ export default function useGoogleAnalytics() {
     analytics.sendPageview(currentPath)
   }, [location])
 }
-
+*/
 function App() {
   
   //useGoogleAnalytics()
