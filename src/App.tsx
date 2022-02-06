@@ -50,7 +50,7 @@ function App() {
   //useGoogleAnalytics()
   const script = document.createElement("script")
   script.async = true
-  scrip.text = `
+  script.text = `
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR99QS3PLS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
