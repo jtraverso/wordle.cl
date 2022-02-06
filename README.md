@@ -2,11 +2,13 @@ Word Guessing Game
 
 This is a clone project of a popular word guessing game made using React, Typescript, and Tailwind.
 
+It has been modified to accept Chilean cities, places and expressions.
+
 _To Run Locally:_
 Clone the repository and perform the following command line actions:
 
 ```bash
-$ cd word-guessing-game
+$ cd wordle.cl
 $ npm install
 $ npm run start
 ```
@@ -14,8 +16,8 @@ $ npm run start
 _To build/run docker container:_
 
 ```bash
-$ docker build -t game .
-$ docker run -d -p 3000:3000 game
+$ docker build -t wordle.cl .
+$ docker run -d -p 3000:3000 wordle.cl
 ```
 
 open http://localhost:3000 in browser.
