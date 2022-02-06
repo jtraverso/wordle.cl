@@ -63,3 +63,4 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     document.body.appendChild(adsenseHorizontalScript)
   )
 }
+)
