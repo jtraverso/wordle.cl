@@ -60,7 +60,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
         La letra C no está en la palabra.
       </p>
+      <div className="adsense-modal-horizontal">
+       document.body.appendChild(adsenseHorizontalScript)
+      </div>
     </BaseModal>
-    document.body.appendChild(adsenseHorizontalScript)
   )
 }
