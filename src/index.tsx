@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import ReactGA from 'react-ga'
 
+
+/*
 const script = document.createElement("script")
 script.async = true
 script.text = `
@@ -16,6 +19,10 @@ script.text = `
   gtag("config", "G-GR99QS3PLS");
 </script>`
 document.body.appendChild(script)
+*/
+
+ReactGA.initialize('G-GR99QS3PLS') // intialize Google Analytics to track site usage
+ReactGA.pageview(window.location.pathname) // track page view
 
 ReactDOM.render(
   <React.StrictMode>
