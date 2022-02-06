@@ -47,19 +47,10 @@ export default function useGoogleAnalytics() {
 */
 function App() {
   
-  //useGoogleAnalytics()
-  const script = document.createElement("script")
-  script.async = true
-  script.text = `
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GR99QS3PLS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    windows.gtag = gtag;
-    gtag("js", new Date());
-    gtag("config", "G-GR99QS3PLS");
-  </script>`
-  document.body.appendChild(script)
+  window.gtag("config", "G-GR99QS3PLS", {
+    page_title:window.location.pathname + window.location.search,
+    page_path:window.location.pathname + window.location.search,
+  })
   
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
