@@ -1,6 +1,18 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
 
+ const adsenseHorizontalScript = `
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836" crossorigin="anonymous"></script>
+    <!-- Wordle - Responsive - Horizontal -->
+ <ins class="adsbygoogle"
+   style="display:block"
+   data-ad-client="ca-pub-2955738892636836"
+   data-ad-slot="3599962958"
+   data-ad-format="auto"
+   data-full-width-responsive="true">
+  </ins>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`
+
 type Props = {
   isOpen: boolean
   handleClose: () => void
