@@ -4,6 +4,8 @@ This is a clone project of a popular word guessing game made using React, Typesc
 
 It has been modified to accept Chilean cities, places and expressions.
 
+See it running on https://www.wordle.cl
+
 _To Run Locally:_
 Clone the repository and perform the following command line actions:
 
