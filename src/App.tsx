@@ -56,8 +56,8 @@ function App() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     windows.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', 'G-GR99QS3PLS');
+    gtag("js", new Date());
+    gtag("config", "G-GR99QS3PLS");
   </script>'
   document.body.appenChild(script)
   
