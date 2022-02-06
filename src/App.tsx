@@ -59,7 +59,7 @@ function App() {
     gtag("js", new Date());
     gtag("config", "G-GR99QS3PLS");
   </script>`
-  document.body.appenChild(script)
+  document.body.appendChild(script)
   
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
