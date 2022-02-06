@@ -46,12 +46,6 @@ export default function useGoogleAnalytics() {
 }
 */
 function App() {
-  
-  window.gtag("config", "G-GR99QS3PLS", {
-    page_title:window.location.pathname + window.location.search,
-    page_path:window.location.pathname + window.location.search,
-  })
-  
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
