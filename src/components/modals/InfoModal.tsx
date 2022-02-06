@@ -12,6 +12,8 @@ import { BaseModal } from './BaseModal'
    data-full-width-responsive="true">
   </ins>
  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>`
+ 
+adsenseHorizontalScript.async = true
 
 type Props = {
   isOpen: boolean
@@ -59,5 +61,6 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         La letra C no está en la palabra.
       </p>
     </BaseModal>
+    document.body.appendChild(adsenseHorizontalScript)
   )
 }
