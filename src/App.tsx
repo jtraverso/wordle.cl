@@ -31,20 +31,7 @@ import {
 import './App.css'
 
 const ALERT_TIME_MS = 2000
-/*
-export default function useGoogleAnalytics() {
-  const location = useLocation()
- 
-  React.useEffect(() => {
-    analytics.init()
-  }, [])
- 
-  React.useEffect(() => {
-    const currentPath = location.pathname + location.search
-    analytics.sendPageview(currentPath)
-  }, [location])
-}
-*/
+
 function App() {
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
