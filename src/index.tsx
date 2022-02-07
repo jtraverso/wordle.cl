@@ -5,29 +5,8 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import ReactGA from 'react-ga'
 
-
-/*
-const script = document.createElement("script")
-script.async = true
-script.text = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GR99QS3PLS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  windows.gtag = gtag;
-  gtag("js", new Date());
-  gtag("config", "G-GR99QS3PLS");
-</script>`
-document.body.appendChild(script)
-*/
-
 ReactGA.initialize('G-GR99QS3PLS') // intialize Google Analytics to track site usage
 ReactGA.pageview(window.location.pathname) // track page view
-
-const script = document.createElement("script")
-script.async = true
-script.text = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2955738892636836" crossorigin="anonymous"></script>'
-document.head.appendChild(script)
 
 ReactDOM.render(
   <React.StrictMode>
