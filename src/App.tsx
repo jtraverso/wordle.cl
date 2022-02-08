@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react'
 import {
   InformationCircleIcon,
   ChartBarIcon,
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
+import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
 import { Grid } from './components/grid/Grid'
 import { Keyboard } from './components/keyboard/Keyboard'
@@ -29,18 +29,18 @@ import {
 } from './constants/settings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
-
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
 } from './lib/localStorage'
+
 import './App.css'
 
 function App() {
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
-  
+
   const [currentGuess, setCurrentGuess] = useState('')
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
@@ -57,6 +57,7 @@ function App() {
       : false
   )
   const [successAlert, setSuccessAlert] = useState('')
+  const [isRevealing, setIsRevealing] = useState(false)
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
     if (loaded?.solution !== solution) {
@@ -66,7 +67,7 @@ function App() {
     if (gameWasWon) {
       setIsGameWon(true)
     }
-    if (loaded.guesses.length === 6 && !gameWasWon) {
+    if (loaded.guesses.length === MAX_CHALLENGES && !gameWasWon) {
       setIsGameLost(true)
     }
     return loaded.guesses
@@ -93,23 +94,30 @@ function App() {
 
   useEffect(() => {
     if (isGameWon) {
-      setSuccessAlert(
-        WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
-      )
       setTimeout(() => {
-        setSuccessAlert('')
-        setIsStatsModalOpen(true)
-      }, ALERT_TIME_MS)
+        setSuccessAlert(
+          WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
+        )
+
+        setTimeout(() => {
+          setSuccessAlert('')
+          setIsStatsModalOpen(true)
+        }, ALERT_TIME_MS)
+      }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
     }
     if (isGameLost) {
       setTimeout(() => {
         setIsStatsModalOpen(true)
-      }, ALERT_TIME_MS)
+      }, GAME_LOST_INFO_DELAY)
     }
   }, [isGameWon, isGameLost])
 
   const onChar = (value: string) => {
-    if (currentGuess.length < 5 && guesses.length < 6 && !isGameWon) {
+    if (
+      currentGuess.length < MAX_WORD_LENGTH &&
+      guesses.length < MAX_CHALLENGES &&
+      !isGameWon
+    ) {
       setCurrentGuess(`${currentGuess}${value}`)
     }
   }
@@ -122,7 +130,7 @@ function App() {
     if (isGameWon || isGameLost) {
       return
     }
-    if (!(currentGuess.length === 5)) {
+    if (!(currentGuess.length === MAX_WORD_LENGTH)) {
       setIsNotEnoughLetters(true)
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
@@ -136,9 +144,20 @@ function App() {
       }, ALERT_TIME_MS)
     }
 
+    setIsRevealing(true)
+    // turn this back off after all
+    // chars have been revealed
+    setTimeout(() => {
+      setIsRevealing(false)
+    }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
+
     const winningWord = isWinningWord(currentGuess)
 
-    if (currentGuess.length === 5 && guesses.length < 6 && !isGameWon) {
+    if (
+      currentGuess.length === MAX_WORD_LENGTH &&
+      guesses.length < MAX_CHALLENGES &&
+      !isGameWon
+    ) {
       setGuesses([...guesses, currentGuess])
       setCurrentGuess('')
 
@@ -147,43 +166,53 @@ function App() {
         return setIsGameWon(true)
       }
 
-      if (guesses.length === 5) {
+      if (guesses.length === MAX_CHALLENGES - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
       }
     }
   }
+  
+      <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+    <div className="flex w-80 mx-auto items-center mb-8 mt-20" ">
 
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8 wordle-padding">
-      <div className="flex w-80 mx-auto items-center mb-8 mt-20" wordle-margin">
-        <h1 className="text-xl grow font-bold dark:text-white">{GAME_TITLE}</h1>
+    <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8 py-10">
+      <div className="flex w-80 mx-auto items-center mb-16 mt-10">
+        <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
+          {GAME_TITLE}
+        </h1>
         {isDarkMode ? (
           <SunIcon
-            className="h-6 w-6 cursor-pointer dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
           <MoonIcon
-            className="h-6 w-6 cursor-pointer"
+            className="h-6 w-6 mr-2 cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
         <InformationCircleIcon
-          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
         <ChartBarIcon
-          className="h-6 w-6 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
-      <Grid guesses={guesses} currentGuess={currentGuess} />
+      <Grid
+        guesses={guesses}
+        currentGuess={currentGuess}
+        isRevealing={isRevealing}
+      />
       <Keyboard
         onChar={onChar}
         onDelete={onDelete}
         onEnter={onEnter}
         guesses={guesses}
+        isRevealing={isRevealing}
       />
       <InfoModal
         isOpen={isInfoModalOpen}
@@ -213,19 +242,8 @@ function App() {
       >
         {ABOUT_GAME_MESSAGE}
       </button>
-/*
+
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
-      <Alert
-        message={WORD_NOT_FOUND_MESSAGE}
-        isOpen={isWordNotFoundAlertOpen}
-      />
-      <Alert message={CORRECT_WORD_MESSAGE(solution)} isOpen={isGameLost} />
-      <Alert
-        message={CORRECT_WORD_MESSAGE(solution)}
-        isOpen={isGameLost && !isRevealing}
-      />
-*/
-<Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
         message={WORD_NOT_FOUND_MESSAGE}
         isOpen={isWordNotFoundAlertOpen}
@@ -242,4 +260,5 @@ function App() {
     </div>
   )
 }
+
 export default App
