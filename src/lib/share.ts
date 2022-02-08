@@ -10,7 +10,7 @@ const shareText = (guesses: string[], lost: boolean) => {
   )
 }
 
-let const st = new shareButtons(GAME_URL , shareText)
+//let const st = new shareButtons(GAME_URL , shareText)
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
