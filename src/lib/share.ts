@@ -3,19 +3,12 @@ import { solutionIndex } from './words'
 import { GAME_TITLE, GAME_URL } from '../constants/strings'
 import { shareButtons } from './shareButtons'
 
-const shareText = (guesses: string[], lost: boolean) => {
-  navigator.clipboard.writeText(
-    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
-      generateEmojiGrid(guesses)`
-  )
-}
-
-//let const st = new shareButtons(GAME_URL , shareText)
+let const st = new shareButtons(GAME_URL , shareText)
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
     `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
-      generateEmojiGrid(guesses) + \n\n${st}`
+      generateEmojiGrid(guesses)`
   )
 }
 
