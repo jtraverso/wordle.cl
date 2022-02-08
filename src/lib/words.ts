@@ -18,7 +18,7 @@ export const getWordOfDay = () => {
   const now = Date.now() - 10800000 //10.800.000 (3*60*60*1000) is to rest 3 hours to the next play, so it suits better the chilean time
   const msInDay = 28800000 //modified to play every 8 hours (8*60*60*1000)
   const index = Math.floor((now - epochMs ) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs  
+  const nextday = (index + 1) * msInDay + epochMs + 10800000 
 
   return {
     solution: WORDS[index % WORDS.length].toUpperCase(),
