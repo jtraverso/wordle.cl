@@ -172,13 +172,10 @@ function App() {
       }
     }
   }
-  
-      <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-    <div className="flex w-80 mx-auto items-center mb-8 mt-20">
 
   return (
-    <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8 py-10">
-      <div className="flex w-80 mx-auto items-center mb-16 mt-10">
+    <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="flex w-80 mx-auto items-center mb-8 mt-20">
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
