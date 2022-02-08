@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-//import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom'
 import {
   InformationCircleIcon,
   ChartBarIcon,
@@ -21,16 +20,21 @@ import {
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
 } from './constants/strings'
+import {
+  MAX_WORD_LENGTH,
+  MAX_CHALLENGES,
+  ALERT_TIME_MS,
+  REVEAL_TIME_MS,
+  GAME_LOST_INFO_DELAY,
+} from './constants/settings'
 import { isWordInWordList, isWinningWord, solution } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
-//import analytics from './lib/analytics'
+
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
 } from './lib/localStorage'
 import './App.css'
-
-const ALERT_TIME_MS = 2000
 
 function App() {
   const prefersDarkMode = window.matchMedia(
@@ -152,7 +156,7 @@ function App() {
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8 wordle-padding">
-      <div className="flex w-80 mx-auto items-center mb-8 mt-12 wordle-margin">
+      <div className="flex w-80 mx-auto items-center mb-8 mt-20" wordle-margin">
         <h1 className="text-xl grow font-bold dark:text-white">{GAME_TITLE}</h1>
         {isDarkMode ? (
           <SunIcon
@@ -209,13 +213,27 @@ function App() {
       >
         {ABOUT_GAME_MESSAGE}
       </button>
-
+/*
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
         message={WORD_NOT_FOUND_MESSAGE}
         isOpen={isWordNotFoundAlertOpen}
       />
       <Alert message={CORRECT_WORD_MESSAGE(solution)} isOpen={isGameLost} />
+      <Alert
+        message={CORRECT_WORD_MESSAGE(solution)}
+        isOpen={isGameLost && !isRevealing}
+      />
+*/
+<Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
+      <Alert
+        message={WORD_NOT_FOUND_MESSAGE}
+        isOpen={isWordNotFoundAlertOpen}
+      />
+      <Alert
+        message={CORRECT_WORD_MESSAGE(solution)}
+        isOpen={isGameLost && !isRevealing}
+      />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}
