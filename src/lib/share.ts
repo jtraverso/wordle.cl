@@ -10,6 +10,8 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   )
 }
 
+export const st = new shareButtons(GAME_URL , shareStatus)
+
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
     .map((guess) => {
