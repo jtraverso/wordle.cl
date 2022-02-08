@@ -13,10 +13,10 @@ export const Cell = ({ value, status }: Props) => {
       'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-600':
         !status,
       'border-black dark:border-slate-100': value && !status,
-      'bg-red-500 dark:bg-red-700 text-white border-red-400 dark:border-red-700':
+      'bg-rose-500 dark:bg-rose-700 text-white border-rose-400 dark:border-rose-700':
         status === 'absent',
-      'bg-green-500 dark:bg-green-700 text-white border-green-500 dark:border-green-700': status === 'correct',
-      'bg-blue-500 dark:bg-blue-700 text-white border-blue-500 dark:border-blue-700': status === 'present',
+      'bg-emerald-400 dark:bg-emerald-600 text-white border-bg-emerald-400 dark:border-bg-emerald-600': status === 'correct',
+      'bg-sky-500 dark:bg-sky-700 text-white border-bg-sky-500 dark:border-bg-sky-700': status === 'present',
       'cell-animation': !!value,
     }
   )
