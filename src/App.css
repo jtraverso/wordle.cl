@@ -3,12 +3,12 @@ html.dark {
 }
 
 
-wordle-margin {
+.wordle-margin {
   margin-top: 10px;
   margin-bottom: 16px;
 }
 
-wordle-padding {
+.wordle-padding {
   padding-top: 10px;
   padding-bottom: 10px;
 }
