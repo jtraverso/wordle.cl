@@ -3,7 +3,14 @@ import { solutionIndex } from './words'
 import { GAME_TITLE, GAME_URL } from '../constants/strings'
 import { shareButtons } from './shareButtons'
 
-const sb = () => <shareButtons />
+const sharetext = (guesses: string[], lost: boolean) => {
+  navigator.clipboard.writeText(
+    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
+      generateEmojiGrid(guesses)`
+  )
+}
+
+const sb = new shareButtons("https://www.wordle.cl", sharetext)
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
