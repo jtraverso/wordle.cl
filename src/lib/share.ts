@@ -9,9 +9,6 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   )
 }
 
-const shareUrl = 'https://www.wordle.cl'
-const title = shareStatus
-
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
     .map((guess) => {
