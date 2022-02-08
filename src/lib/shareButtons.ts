@@ -16,7 +16,7 @@ import {
 } from 'react-share'
 import './shareButtons.css'
 
-class shareButtons extends Component {
+export class shareButtons extends Component {
   shareUrl: string
   title: string
   constructor(shareUrl: string, title: string) {
