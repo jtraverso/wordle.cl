@@ -16,9 +16,6 @@ import {
 } from 'react-share'
 import './shareButtons.css'
 
-navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon)
-
-
 export const shareText = (guesses: string[], lost: boolean) => {
     return `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
       generateEmojiGrid(guesses)
@@ -27,6 +24,9 @@ export const shareText = (guesses: string[], lost: boolean) => {
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(shareText)
 }
+
+
+navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon  + ShareButtons(shareText, GAME_URL)
 
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
@@ -49,12 +49,18 @@ export const generateEmojiGrid = (guesses: string[]) => {
     .join('\n')
 }
 
-/*
 type Props = {
   title: string
   shareUrl: string
 }
-+ ShareButtons (shareText, GAME_URL)
+
+export const ShareButtons = ({ title, shareUrl }: Props) => {
+  return (
+    <div><p>{title} {shareUrl} </p></div>
+ )
+}
+
+/*
 export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
     <div className="Demo__container">
