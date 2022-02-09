@@ -26,7 +26,8 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
 }
 
 navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + 
-                              FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon  + ShareButtons(shareText, GAME_URL))
+                              FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon)
+navigator.clipboard.writeText("")
 
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
@@ -49,14 +50,33 @@ export const generateEmojiGrid = (guesses: string[]) => {
     .join('\n')
 }
 
+import { getGuessStatuses } from '../../lib/statuses'
+import { Cell } from './Cell'
+
+type Props = {
+  guess: string
+}
+
+export const CompletedRow1 = ({ guess }: Props) => {
+  const statuses = getGuessStatuses(guess)
+
+  return (
+    <div className="flex justify-center mb-1">
+      {guess.split('').map((letter, i) => (
+        <Cell key={i} value={letter} status={statuses[i]} />
+      ))}
+    </div>
+  )
+}
+
+/*
+
 type Props = {
   title: string
   shareUrl: string
 }
 
-type Props = {
-  guess: string
-}
+
 
 export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
@@ -66,8 +86,6 @@ export const ShareButtons = ({ title, shareUrl }: Props) => {
     </div>
   )
 }
-
-/*
 export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
     <div className="Demo__container">
