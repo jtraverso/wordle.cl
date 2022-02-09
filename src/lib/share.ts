@@ -22,10 +22,7 @@ export const shareText = (guesses: string[], lost: boolean) => {
 }
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
-  navigator.clipboard.writeText(
-    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
-      generateEmojiGrid(guesses) + ShareButtons (shareText, GAME_URL)
-  )
+  navigator.clipboard.writeText(shareText)
 }
 
 export const generateEmojiGrid = (guesses: string[]) => {
@@ -48,13 +45,13 @@ export const generateEmojiGrid = (guesses: string[]) => {
     })
     .join('\n')
 }
-  
 
+/*
 type Props = {
   title: string
   shareUrl: string
 }
-
++ ShareButtons (shareText, GAME_URL)
 export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
     <div className="Demo__container">
@@ -120,3 +117,4 @@ export const ShareButtons = ({ title, shareUrl }: Props) => {
     </div>
   )
 }
+*/
