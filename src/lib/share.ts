@@ -16,6 +16,9 @@ import {
 } from 'react-share'
 import './shareButtons.css'
 
+navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon)
+
+
 export const shareText = (guesses: string[], lost: boolean) => {
     return `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
       generateEmojiGrid(guesses)
