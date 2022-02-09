@@ -25,7 +25,6 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(shareText)
 }
 
-
 navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + 
                               FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon  + ShareButtons(shareText, GAME_URL))
 
@@ -55,10 +54,17 @@ type Props = {
   shareUrl: string
 }
 
+type Props = {
+  guess: string
+}
+
 export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
-    <div><p>{title} {shareUrl} </p></div>
- )
+    <div className="flex justify-center mb-1">
+      { title}
+      { title}
+    </div>
+  )
 }
 
 /*
