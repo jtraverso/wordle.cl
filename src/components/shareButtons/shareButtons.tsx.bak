@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import {
   WhatsappShareButton,
   FacebookShareButton,
@@ -26,7 +27,6 @@ export const ShareButtons = ({ title, shareUrl }: Props) => {
         <WhatsappShareButton
           url={shareUrl}
           title={title}
-          separator=":: "
           className="Demo__some-network__share-button"
         >
         <WhatsappIcon size={32} round />
