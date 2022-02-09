@@ -78,7 +78,7 @@ export const StatsModal = ({
         </div>
       )}
 	  <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-	   { sharebuttons(shareText(guesses, isGameLost,GAME_TITLE,GAME_URL),GAME_URL) }
+	   { ShareButtons(shareText(guesses, isGameLost,GAME_TITLE,GAME_URL),GAME_URL) }
 	  </div>
     </BaseModal>
   )
