@@ -9,11 +9,6 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   )
 }
 
-export const shareText = (guesses: string[], lost: boolean) => {
-    return `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
-      generateEmojiGrid(guesses)
-}
-
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
     .map((guess) => {
