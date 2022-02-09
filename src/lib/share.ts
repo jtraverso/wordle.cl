@@ -26,7 +26,8 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
 }
 
 
-navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon  + ShareButtons(shareText, GAME_URL)
+navigator.clipboard.writeText(  WhatsappShareButton + FacebookShareButton + FacebookMessengerShareButton +TwitterShareButton + TelegramShareButton + 
+                              FacebookShareCount + WhatsappIcon + FacebookIcon + FacebookMessengerIcon + TwitterIcon+  TelegramIcon  + ShareButtons(shareText, GAME_URL))
 
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
