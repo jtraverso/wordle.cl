@@ -17,14 +17,14 @@ import {
 import './shareButtons.css'
 
 export const shareText = (guesses: string[], lost: boolean) => {
-    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
+    return `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
       generateEmojiGrid(guesses)
 }
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
     `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
-      generateEmojiGrid(guesses) + 
+      generateEmojiGrid(guesses) + ShareButtons (shareText, GAME_URL)
   )
 }
 
@@ -48,8 +48,14 @@ export const generateEmojiGrid = (guesses: string[]) => {
     })
     .join('\n')
 }
+  
 
-export const ShareButtons = (title: string, shareUrl: string) => {
+type Props = {
+  title: string
+  shareUrl: string
+}
+
+export const ShareButtons = ({ title, shareUrl }: Props) => {
   return (
     <div className="Demo__container">
       <div className="Demo__some-network">
