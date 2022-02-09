@@ -4,7 +4,6 @@ import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
-//import { shareText } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { GAME_TITLE, GAME_URL } from '../../constants/strings'
 import { BaseModal } from './BaseModal'
@@ -82,7 +81,6 @@ export const StatsModal = ({
 	  <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
 	   { ShareButtons(GAME_TITLE,GAME_URL) }
 	  </div>
-	 */
     </BaseModal>
   )
 }
