@@ -9,13 +9,13 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   )
 }
 
-export const shareText = (guesses: string[], lost: boolean) => {
-    return `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n\n` +
+export const shareText = (guesses: string[], lost: boolean, game_title: string, game_url: string) => {
+    return `${game_title ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${game_url}\n` +
       generateEmojiGrid(guesses)
 }
 
 export const generateEmojiGrid = (guesses: string[]) => {
-  return guesses
+return guesses
     .map((guess) => {
       const status = getGuessStatuses(guess)
       return guess

@@ -76,10 +76,10 @@ export const StatsModal = ({
             {SHARE_TEXT}
           </button>
         </div>
-		<div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-		  { sharebuttons(shareText(guesses, isGameLost),GAME_URL) }
-		</div>
       )}
+	  <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
+	   { sharebuttons(shareText(guesses, isGameLost),GAME_URL) }
+	  </div>
     </BaseModal>
   )
 }
