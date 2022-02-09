@@ -1,4 +1,3 @@
-import React from 'react'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
@@ -6,7 +5,7 @@ import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
 //import { shareText } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
-import { GAME_TITLE, GAME_URL } from '../../constants/strings'
+//import { GAME_TITLE, GAME_URL } from '../../constants/strings'
 import { BaseModal } from './BaseModal'
 import {
   STATISTICS_TITLE,
@@ -14,7 +13,7 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
-import { ShareButtons } from '../shareButtons/shareButtons'
+//import { ShareButtons } from '../shareButtons/shareButtons'
 
 type Props = {
   isOpen: boolean
@@ -79,8 +78,9 @@ export const StatsModal = ({
           </button>
         </div>
       )}
+	  /*
 	  <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-	   { ShareButtons(GAME_TITLE,GAME_URL) }
+	   { ShareButtons(shareText(guesses, isGameLost,GAME_TITLE,GAME_URL),GAME_URL) }
 	  </div>
 	 */
     </BaseModal>
