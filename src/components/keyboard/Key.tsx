@@ -20,7 +20,7 @@ export const Key = ({
   value,
   onClick,
   isRevealing,
-  svg
+  svg,
 }: Props) => {
   const keyDelayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
 
@@ -50,7 +50,7 @@ export const Key = ({
   }
 
   return (
-    if (svg) {
+    if (svg=true) {
     <button style={styles} className={classes} onClick={handleClick}>
       {value}
     </button>
