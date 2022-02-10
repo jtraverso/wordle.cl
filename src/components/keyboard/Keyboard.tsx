@@ -9,6 +9,7 @@ type Props = {
   onEnter: () => void
   guesses: string[]
   isRevealing?: boolean
+  svg?: boolean
 }
 
 export const Keyboard = ({
@@ -17,13 +18,14 @@ export const Keyboard = ({
   onEnter,
   guesses,
   isRevealing,
+  svg,
 }: Props) => {
   const charStatuses = getStatuses(guesses)
 
   const onClick = (value: string) => {
-    if (value === 'ENVIAR') {
+    if (value === 'ENTER') {
       onEnter()
-    } else if (value === 'BORRAR') {
+    } else if (value === 'DELETE') {
       onDelete()
     } else {
       onChar(value)
