@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable import/no-unresolved, import/extensions, import/no-extraneous-dependencies */
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
