@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import classnames from 'classnames'
 import { CharStatus } from '../../lib/statuses'
 import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
+import { ReactComponent as SVGIcon } from "./svg-back.svg"
 
 type Props = {
   children?: ReactNode
@@ -50,8 +51,14 @@ export const Key = ({
   }
 
   return (
-	<button style={styles} className={classes} onClick={handleClick}>
-	  {svg ? {value} : {children || value}},
+	<button className={classes} onClick={handleClick}>
+        <div className="icon">
+          {svg ? {<SVGIcon />} : "" }
+          {children || value}
+        </div>
     </button>
+	
+	
+	
   )
 }
