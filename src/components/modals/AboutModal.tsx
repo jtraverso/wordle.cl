@@ -7,23 +7,15 @@ type Props = {
 
 export const AboutModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="Sobre Wordle.cl" isOpen={isOpen} handleClose={handleClose}>
-<p className="text-sm text-gray-500 dark:text-gray-300">
-        Este juego es Open Source -{' '}
-        <a
-          href="https://github.com/jtraverso/wordle.cl"
-          className="underline font-bold"
-        >
-          revisa el código aquí
-        </a>{' '}
-      </p>
+    <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-       Basado en -{' '}
+        This is an open source version of the word guessing game we all know and
+        love -{' '}
         <a
           href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
         >
-          revisa el código aquí
+          check out the code here
         </a>{' '}
       </p>
     </BaseModal>
