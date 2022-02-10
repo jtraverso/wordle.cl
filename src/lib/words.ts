@@ -25,7 +25,7 @@ export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
         knownLetterSet.add(guess[i])
       }
       if (statuses[i] === 'correct' && word[i] !== guess[i]) {
-        return `Must use ${guess[i]} in position ${i + 1}`
+        return `Modo difícil activado: Debes usar la letra ${guess[i]} en la posición ${i + 1}`
       }
     }
   }
@@ -33,7 +33,7 @@ export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
   for (const letter of Array.from(knownLetterSet.values())) {
     // fail fast, always return first failed letter if applicable
     if (!word.includes(letter)) {
-      return `Guess must contain ${letter}`
+      return `Modo difícil activado: Debes usar la letra ${letter} en alguna posición`
     }
   }
   return false
@@ -42,10 +42,10 @@ export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
 export const getWordOfDay = () => {
   // January 1, 2022 Game Epoch
   const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
-  const now = Date.now()
-  const msInDay = 86400000
+  const now = Date.now() - 10800000 //10.800.000 (3*60*60*1000) 3 hours less to the next play, so it suits better the chilean time
+  const msInDay = 28800000 //modified to play every 8 hours (8*60*60*1000)
   const index = Math.floor((now - epochMs) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs
+  const nextday = (index + 1) * msInDay + epochMs + 10800000  //10.800.000 (3*60*60*1000) 3 hours less to the next play, so it suits better the chilean time
 
   return {
     solution: WORDS[index % WORDS.length].toUpperCase(),
