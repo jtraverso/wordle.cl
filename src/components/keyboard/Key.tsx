@@ -52,7 +52,7 @@ export const Key = ({
 
   return (
 	<button className={classes} onClick={handleClick}>
-        <div className="icon">
+        <div>
           {svg ? {<SVGIcon />} : "" }
           {children || value}
         </div>
