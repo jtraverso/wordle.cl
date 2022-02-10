@@ -2,7 +2,7 @@ Word Guessing Game
 
 This is a clone project of a popular word guessing game made using React, Typescript, and Tailwind.
 
-It has been modified to accept Chilean cities, places, names, expressions, brands, etc.
+It includes spanish words dictionary, and the challenges has been modified to accept Chilean cities, places, names, expressions, brands, etc.
 
 See it running on https://www.wordle.cl
 

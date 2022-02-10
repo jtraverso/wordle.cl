@@ -8,7 +8,7 @@ type Props = {
 export const AboutModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Sobre Wordle.cl" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500 dark:text-gray-300">
+<p className="text-sm text-gray-500 dark:text-gray-300">
         Este juego es Open Source -{' '}
         <a
           href="https://github.com/jtraverso/wordle.cl"
@@ -20,7 +20,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
        Basado en -{' '}
         <a
-          href="https://github.com/hannahcode/GAME"
+          href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
         >
           revisa el código aquí

@@ -1,13 +1,9 @@
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable import/no-unresolved, import/extensions, import/no-extraneous-dependencies */
-import React from 'react'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
-//import { GAME_TITLE, GAME_URL } from '../../constants/strings'
 import { BaseModal } from './BaseModal'
 import {
   STATISTICS_TITLE,
@@ -15,7 +11,6 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
-import { ShareButtons } from '../shareButtons/shareButtons'
 
 type Props = {
   isOpen: boolean
@@ -25,6 +20,7 @@ type Props = {
   isGameLost: boolean
   isGameWon: boolean
   handleShare: () => void
+  isHardMode: boolean
 }
 
 export const StatsModal = ({
@@ -35,6 +31,7 @@ export const StatsModal = ({
   isGameLost,
   isGameWon,
   handleShare,
+  isHardMode,
 }: Props) => {
   if (gameStats.totalGames <= 0) {
     return (
@@ -72,7 +69,7 @@ export const StatsModal = ({
             type="button"
             className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
             onClick={() => {
-              shareStatus(guesses, isGameLost)
+              shareStatus(guesses, isGameLost, isHardMode)
               handleShare()
             }}
           >
@@ -80,9 +77,6 @@ export const StatsModal = ({
           </button>
         </div>
       )}
-	  <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-	   { ShareButtons() }
-	  </div>
     </BaseModal>
   )
 }
