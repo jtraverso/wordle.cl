@@ -51,7 +51,7 @@ export const Key = ({
 
   return (
 	<button style={styles} className={classes} onClick={handleClick}>
-      {children || value}
+	  {svg ? "{value}" : "{children || value}"}
     </button>
   )
 }
