@@ -50,14 +50,8 @@ export const Key = ({
   }
 
   return (
-    if (svg===true) {
-    <button style={styles} className={classes} onClick={handleClick}>
-      {value}
-    </button>
-	} else {
-	    <button style={styles} className={classes} onClick={handleClick}>
+	<button style={styles} className={classes} onClick={handleClick}>
       {children || value}
     </button>
-	}
   )
 }
