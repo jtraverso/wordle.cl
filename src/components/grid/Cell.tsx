@@ -27,11 +27,11 @@ export const Cell = ({
       'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-600':
         !status,
       'border-black dark:border-slate-100': value && !status,
-      'absent shadowed bg-rose-500 dark:bg-rose-700 text-white border-rose-400 dark:border-rose-700':
+      'absent shadowed bg-slate-400 dark:bg-slate-700 text-white border-slate-400 dark:border-slate-700':
         status === 'absent',
-      'correct shadowed bg-emerald-400 dark:bg-emerald-600 text-white border-bg-emerald-400 dark:border-bg-emerald-600':
+      'correct shadowed bg-green-500 text-white border-green-500':
         status === 'correct',
-      'present shadowed bg-sky-500 dark:bg-sky-700 text-white border-bg-sky-500 dark:border-bg-sky-700':
+      'present shadowed bg-yellow-500 text-white border-yellow-500':
         status === 'present',
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
