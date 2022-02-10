@@ -54,7 +54,7 @@ export const Key = ({
   )
 }
 
-export const Key = ({
+export const SgvKey = ({
   children,
   status,
   width = 40,
