@@ -1,5 +1,5 @@
 import { getStatuses } from '../../lib/statuses'
-import { Key } from './Key'
+import { Key, SvgKey } from './Key'
 import { useEffect } from 'react'
 import { ENTER_TEXT, DELETE_TEXT } from '../../constants/strings'
 
@@ -86,9 +86,9 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-        <Key width={65.4} value="BORRAR" onClick={onClick}>
+        <SvgKey width={65.4} value="BORRAR" onClick={onClick}>
           {DELETE_TEXT}
-        </Key>
+        </SvgKey>
       </div>
     </div>
   )
