@@ -95,7 +95,9 @@ function App() {
   
   useEffect(() => {
     if (stats.totalGames === 0) {
-      const setTimeout(() => { setIsInfoModalOpen(true) }, ALERT_TIME_MS)
+	setTimeout(() => {
+          setIsInfoModalOpen(true)
+      }, ALERT_TIME_MS)
     }
   }, [stats])
 
