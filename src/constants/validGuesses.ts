@@ -6032,6 +6032,7 @@ export const VALID_GUESSES = [
 'malea',
 'malee',
 'maleo',
+'males'
 'malis',
 'malla',
 'malle',

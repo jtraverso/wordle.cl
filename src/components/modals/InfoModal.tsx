@@ -1,5 +1,13 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import {
+  InformationCircleIcon,
+  ChartBarIcon,
+  SunIcon,
+  MoonIcon,
+  CakeIcon,
+  AcademicCapIcon,
+} from '@heroicons/react/outline'
 
 type Props = {
   isOpen: boolean
@@ -10,21 +18,17 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Como jugar" isOpen={isOpen} handleClose={handleClose}>
 	<p className="text-sm text-gray-500 dark:text-gray-300">
-	  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-2 cursor-pointer">
-	     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-      </svg>
+	  <MoonIcon className="h-6 w-6 mr-2 cursor-pointer" />  
 	  Activa modo oscuro
-	  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-2 cursor-pointer dark:stroke-white">
-	    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-	  </svg>
+      <SunIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	  Activa modo claro
-	  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-2 cursor-pointer dark:stroke-white">
-	    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
+	  <AcademicCapIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	  Activa modo fácil
+      <CakeIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	  Activa modo difícil
+      <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	  Despliega información sobre como jugar
-	  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 mr-3 cursor-pointer dark:stroke-white">
-	    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
-	  </path></svg>
+      <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	  Despliega estadísticas del juego
 	</p>
       <p className="text-sm text-gray-500 dark:text-gray-300">

@@ -1,6 +1,6 @@
 {
-  "short_name": "Game",
-  "name": "Game",
+  "short_name": "wordle.cl",
+  "name": "Wordle a la chilena",
   "icons": [
     {
       "src": "favicon.ico",
