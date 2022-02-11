@@ -193,6 +193,7 @@ export const WORDS = [
 'minos',
 'burro',
 'judas',
+'ranco',
 'tatas',
 'combo',
 'taita',
