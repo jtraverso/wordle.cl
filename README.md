@@ -2,7 +2,7 @@
 
 This is a clone project of the popular word guessing game we all know and love. Made using React, Typescript, and Tailwind.
 
-[**Try out the now!**](https://www.wordle.cl)
+[**Try it out now!**](https://www.wordle.cl)
 
 ## Build and run
 
