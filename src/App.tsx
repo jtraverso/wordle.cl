@@ -284,7 +284,7 @@ function App() {
         <div className="w-1/4 p-4">
 	      <button
             type="button"
-            className="mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+            className="place-content-end mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
             onClick={() => setIsInfoModalOpen(true)}
             >
           {HOW_TO_PLAY_TEXT}
@@ -293,7 +293,7 @@ function App() {
 	    <div className="w-1/4 p-4">
 		  <button
             type="button"
-            className="mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
+            className="place-content-start mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
             onClick={() => setIsAboutModalOpen(true)}
           >
          {ABOUT_GAME_MESSAGE}
