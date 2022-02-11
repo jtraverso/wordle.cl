@@ -8107,6 +8107,7 @@ export const VALID_GUESSES = [
 'poten',
 'poteo',
 'potes',
+'potos',
 'potra',
 'potro',
 'poyal',
