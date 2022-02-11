@@ -94,7 +94,7 @@ function App() {
   const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
   
   useEffect(() => {
-    if (stats.totalgames === 0) {
+    if (stats.totalGames === 0) {
       setIsInfoModalOpen(true)
     }
   }, [stats])
