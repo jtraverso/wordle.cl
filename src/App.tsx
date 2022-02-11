@@ -92,6 +92,12 @@ function App() {
   const [isMissingPreviousLetters, setIsMissingPreviousLetters] =
     useState(false)
   const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
+  
+  useEffect(() => {
+    if (stats.totalgames === 0) {
+      setIsInfoModalOpen(true)
+    }
+  }, [stats])
 
   useEffect(() => {
     if (isDarkMode) {
