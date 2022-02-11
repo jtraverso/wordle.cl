@@ -181,6 +181,7 @@ export const WORDS = [
 'cunco',
 'hueco',
 'perno',
+'piure',
 'palta',
 'gallo',
 'suche',
