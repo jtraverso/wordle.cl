@@ -17,20 +17,6 @@ type Props = {
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Como jugar" isOpen={isOpen} handleClose={handleClose}>
-	<p className="text-sm text-gray-500 dark:text-gray-300">
-	  <MoonIcon className="h-6 w-6 mr-2 cursor-pointer" />  
-	  Activa modo oscuro
-      <SunIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	  Activa modo claro
-	  <AcademicCapIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	  Activa modo fácil
-      <CakeIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	  Activa modo difícil
-      <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	  Despliega información sobre como jugar
-      <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
-	  Despliega estadísticas del juego
-	</p>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Tienes 6 intentos para adivinar la palabra (incluye ciudades, comunas, modismos y otras expresiones y formas de hablar típicas chilenas ej: "PASAO en vez de PASADO").
         <br/>Después de cada intento cada celda cambiará según que tan cerca estuviste.
@@ -67,6 +53,30 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500 dark:text-gray-300">
         La letra C no está en la palabra.
       </p>
+	  <p className="text-sm text-gray-500 dark:text-gray-300">
+	    <MoonIcon className="h-6 w-6 mr-2 cursor-pointer" />  
+	      Activa modo oscuro
+      </p>
+	  <p className="text-sm text-gray-500 dark:text-gray-300">
+        <SunIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	      Activa modo claro
+      </p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+	    <AcademicCapIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	      Activa modo fácil
+      </p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+        <CakeIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	      Activa modo difícil
+      </p>
+	  <p className="text-sm text-gray-500 dark:text-gray-300">
+        <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+	      Despliega información sobre como jugar
+	 </p>
+     <p className="text-sm text-gray-500 dark:text-gray-300">
+        <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
+	      Despliega estadísticas del juego
+	   </p>
     </BaseModal>
   )
 }
