@@ -279,9 +279,9 @@ function App() {
         handleClose={() => setIsAboutModalOpen(false)}
       />
 	  
-	  <div class="flex">
-	    <div class="w-1/4 p-4"></div>
-        <div class="w-1/4 p-4">
+	  <div className="flex">
+	    <div className="w-1/4 p-4"></div>
+        <div className="w-1/4 p-4">
 	      <button
             type="button"
             className="mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
@@ -290,7 +290,7 @@ function App() {
           {HOW_TO_PLAY_TEXT}
          </button>
 	    </div>
-	    <div class="w-1/4 p-4">
+	    <div className="w-1/4 p-4">
 		  <button
             type="button"
             className="mx-auto mt-5 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
@@ -299,7 +299,7 @@ function App() {
          {ABOUT_GAME_MESSAGE}
          </button>
 	    </div>
-        <div class="w-1/4 p-4"></div>
+        <div className="w-1/4 p-4"></div>
       </div>
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
