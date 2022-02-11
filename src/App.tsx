@@ -301,7 +301,6 @@ function App() {
 	    </div>
         <div className="w-1/4 p-0"></div>
       </div>
-      <a href={process.env.PUBLIC_URL + '/about.html'} >mas info</a> 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
         message={WORD_NOT_FOUND_MESSAGE}
