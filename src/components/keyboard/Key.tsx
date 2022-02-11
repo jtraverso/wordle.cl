@@ -48,8 +48,8 @@ export const Key = ({
   }
 
   return (
-	<button className={classes} onClick={handleClick}>
-          {children || value}
+    <button style={styles} className={classes} onClick={handleClick}>
+      {children || value}
     </button>
   )
 }
