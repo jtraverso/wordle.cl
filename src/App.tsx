@@ -98,6 +98,13 @@ function App() {
 	setTimeout(() => {
           setIsInfoModalOpen(true)
       }, ALERT_TIME_MS)
+    setTimeout(() => {
+	  if (isInfoModalOpen === false) {
+	    <Alert
+          message="INGRESA UNA PALABRA DE 5 LETRAS EN ESPAÑOL PARA COMENZAR"
+        />
+        }, ALERT_TIME_MS)
+      }
     }
   }, [stats])
 
