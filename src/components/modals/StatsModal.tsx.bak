@@ -50,15 +50,14 @@ export const StatsModal = ({
       title={STATISTICS_TITLE}
       isOpen={isOpen}
       handleClose={handleClose}
-    >
-      <StatBar gameStats={gameStats} />
+      <StatBar gameStats={gameStats} />d
       <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
         {GUESS_DISTRIBUTION_TEXT}
       </h4>
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
-          <div>
+          <div>dfd
             <h5>{NEW_WORD_TEXT}</h5>
             <Countdown
               className="text-lg font-medium text-gray-900 dark:text-gray-100"
@@ -76,6 +75,8 @@ export const StatsModal = ({
           >
             {SHARE_TEXT}
           </button>
+		</div>
+		<div className="mt-5 sm:mt-6 columns-1 dark:text-white">
 		  <InlineShareButtons
           config={{
             alignment: 'center',  // alignment of buttons (left, center, right)
