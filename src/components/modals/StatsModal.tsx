@@ -51,7 +51,7 @@ export const StatsModal = ({
       isOpen={isOpen}
       handleClose={handleClose}
 	>
-      <StatBar gameStats={gameStats} />d
+      <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
         {GUESS_DISTRIBUTION_TEXT}
       </h4>
@@ -100,9 +100,9 @@ export const StatsModal = ({
             size: 32,             // the size of each button (INTEGER)
 
             // OPTIONAL PARAMETERS
-            //url: '', // (defaults to current url)
+            url: shareText(guesses, isGameLost, isHardMode), // (defaults to current url)
             //image: 'https://bit.ly/2CMhCMC',  // (defaults to og:image or twitter:image)
-            description: shareText(guesses, isGameLost, isHardMode),       // (defaults to og:description or twitter:description)
+            //description: shareText(guesses, isGameLost, isHardMode),       // (defaults to og:description or twitter:description)
             title: 'Wordle.cl - Adivina la palabra en 6 intentos',            // (defaults to og:title or twitter:title)
           }}
         />
