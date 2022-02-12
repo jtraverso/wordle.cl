@@ -40,6 +40,8 @@ export const Keyboard = ({
         const key = e.key.toUpperCase()
         if (key.length === 1 && key >= 'A' && key <= 'Z') {
           onChar(key)
+        } else if (key.length === 1 && key === 'Ñ') {
+          onChar(key)
         }
       }
     }
