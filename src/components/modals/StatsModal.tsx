@@ -102,7 +102,7 @@ export const StatsModal = ({
             // OPTIONAL PARAMETERS
             //url: '', // (defaults to current url)
             //image: 'https://bit.ly/2CMhCMC',  // (defaults to og:image or twitter:image)
-            description: shareStatus(guesses, isGameLost, isHardMode),       // (defaults to og:description or twitter:description)
+            description: shareText(guesses, isGameLost, isHardMode),       // (defaults to og:description or twitter:description)
             title: 'Wordle.cl - Adivina la palabra en 6 intentos',            // (defaults to og:title or twitter:title)
           }}
         />
