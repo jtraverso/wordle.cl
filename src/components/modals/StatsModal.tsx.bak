@@ -2,7 +2,7 @@ import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
-import { shareStatus } from '../../lib/share'
+import { shareStatus, shareText } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {InlineShareButtons} from 'sharethis-reactjs'
@@ -102,7 +102,7 @@ export const StatsModal = ({
             // OPTIONAL PARAMETERS
             //url: '', // (defaults to current url)
             //image: 'https://bit.ly/2CMhCMC',  // (defaults to og:image or twitter:image)
-            description: 'Wordle a la chilena',       // (defaults to og:description or twitter:description)
+            description: {shareStatus(guesses, isGameLost, isHardMode)},       // (defaults to og:description or twitter:description)
             title: 'Wordle.cl - Adivina la palabra en 6 intentos',            // (defaults to og:title or twitter:title)
           }}
         />
