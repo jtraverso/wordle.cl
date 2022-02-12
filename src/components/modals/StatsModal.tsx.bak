@@ -89,7 +89,6 @@ export const StatsModal = ({
 			  'facebook',
               'messenger',
               'twitter',
-			  'telegram',
 			  'reddit',
             ],
             padding: 12,          // padding within buttons (INTEGER)

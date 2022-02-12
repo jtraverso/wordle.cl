@@ -14,6 +14,19 @@ export const shareStatus = (
   )
 }
 
+export const shareText = (
+  guesses: string[],
+  lost: boolean,
+  isHardMode: boolean
+) => {
+  return (
+    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n${GAME_URL}\n
+    ${ isHardMode ? HARD_MODE_TEXT : '' }
+    \n\n` + generateEmojiGrid(guesses)
+  )
+}
+
+
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
     .map((guess) => {
