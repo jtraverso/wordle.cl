@@ -2,7 +2,7 @@ import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
-import { shareStatus, shareText } from '../../lib/share'
+import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import { socialButtons } from '../socialButtons/socialButtons'
@@ -79,7 +79,7 @@ export const StatsModal = ({
           </button>
 		</div>
 		<div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-			socialButtons(guesses, isGameLost, isHardMode)
+			{socialButtons(guesses, isGameLost, isHardMode)}
         </div>
 	    </div>
       )}
