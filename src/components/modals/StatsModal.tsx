@@ -78,9 +78,7 @@ export const StatsModal = ({
             {SHARE_TEXT}
           </button>
 		</div>
-	    </div>
-      )}
-	<div className="mt-5 sm:mt-6 columns-1 dark:text-white">
+	    <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
 		  <InlineShareButtons
           config={{
             alignment: 'center',  // alignment of buttons (left, center, right)
@@ -107,6 +105,9 @@ export const StatsModal = ({
           }}
         />
         </div>
+	  </div>
+  	</div>
+      )}
     </BaseModal>
   )
 }
