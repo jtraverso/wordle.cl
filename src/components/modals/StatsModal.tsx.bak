@@ -5,6 +5,7 @@ import { GameStats } from '../../lib/localStorage'
 import { shareStatus, shareText } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
+import { socialButtons } from '../socialButtons/socialButtons'
 import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
