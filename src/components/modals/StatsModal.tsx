@@ -2,9 +2,10 @@ import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
-import { shareStatus, shareText, socialButtons } from '../../lib/share'
+import { shareStatus, shareText } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
+import { socialButtons } from '../socialButtons/socialButtons'
 import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
