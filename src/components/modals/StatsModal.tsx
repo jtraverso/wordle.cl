@@ -111,3 +111,5 @@ export const StatsModal = ({
     </BaseModal>
   )
 }
+
+export default InlineShareButtons
