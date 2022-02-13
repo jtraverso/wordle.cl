@@ -10055,6 +10055,7 @@ export const VALID_GUESSES = [
 'tongo',
 'tonos',
 'tonta',
+'tonka',
 'tonto',
 'toñil',
 'topan',
