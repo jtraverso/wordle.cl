@@ -1,4 +1,4 @@
-import { InlineShareButtons } from 'sharethis-reactjs'
+import {InlineShareButtons} from 'sharethis-reactjs'
 import { shareText } from '../../lib/share'
 
 type Props = {
@@ -6,8 +6,7 @@ type Props = {
   isGameLost: boolean
   isHardMode: boolean
 }
-
-export const socialButtons = ({ guesses, isGameLost, isHardMode  }: Props) => {
+export const socialButtons  ({ guesses, isGameLost, isHardMode  }: Props) => {
   return (
     <InlineShareButtons
       config={{
@@ -31,7 +30,7 @@ export const socialButtons = ({ guesses, isGameLost, isHardMode  }: Props) => {
       url: shareText(guesses, isGameLost, isHardMode), // (defaults to current url)
       //image: 'https://bit.ly/2CMhCMC',  // (defaults to og:image or twitter:image)
       //description: shareText(guesses, lost, isHardMode),       // (defaults to og:description or twitter:description)
-      title: 'Wordle.cl - Adivina la palabra en 6 intentos'            // (defaults to og:title or twitter:title)
+      title: 'Wordle.cl - Adivina la palabra en 6 intentos',            // (defaults to og:title or twitter:title)
     }}
     />
   )
