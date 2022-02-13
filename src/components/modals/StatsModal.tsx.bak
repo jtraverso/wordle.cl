@@ -79,7 +79,7 @@ export const StatsModal = ({
           </button>
 		</div>
 		<div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-		  <socialButtons
+		  <SocialButtons
 			guesses = {guesses}
 			isGameLost = {isGameLost}
 			isHardMode = {isHardMode}

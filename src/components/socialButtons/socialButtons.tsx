@@ -8,7 +8,8 @@ type Props = {
 }
 
 export const SocialButtons = ({ guesses, isGameLost, isHardMode  }: Props) => {
-  return (    <InlineShareButtons
+  return (
+    <InlineShareButtons
       config={{
       alignment: 'center',  // alignment of buttons (left, center, right)
       color: 'social',      // set the color of buttons (social, white)
