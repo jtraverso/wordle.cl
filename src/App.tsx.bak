@@ -92,13 +92,14 @@ function App() {
   const [isMissingPreviousLetters, setIsMissingPreviousLetters] =
     useState(false)
   const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
-  
+
   useEffect(() => {
     if (stats.totalGames === 0) {
-	  setTimeout(() => {
+	setTimeout(() => {
           setIsInfoModalOpen(true)
       }, ALERT_TIME_MS)
-  	}, [stats])
+    }
+  }, [stats])
   }
 
   useEffect(() => {

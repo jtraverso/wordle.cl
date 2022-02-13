@@ -92,7 +92,7 @@ function App() {
   const [isMissingPreviousLetters, setIsMissingPreviousLetters] =
     useState(false)
   const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
-
+  
   useEffect(() => {
     if (stats.totalGames === 0) {
 	setTimeout(() => {
@@ -100,7 +100,6 @@ function App() {
       }, ALERT_TIME_MS)
     }
   }, [stats])
-  }
 
   useEffect(() => {
     if (isDarkMode) {
