@@ -187,15 +187,19 @@ useEffect(() => {
     }
     if (!(currentGuess.length === MAX_WORD_LENGTH)) {
       setIsNotEnoughLetters(true)
+      setCurrentRowClass('jiggle')
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
+        setCurrentRowClass('')
       }, ALERT_TIME_MS)
     }
 
     if (!isWordInWordList(currentGuess)) {
       setIsWordNotFoundAlertOpen(true)
+      setCurrentRowClass('jiggle')
       return setTimeout(() => {
         setIsWordNotFoundAlertOpen(false)
+        setCurrentRowClass('')
       }, ALERT_TIME_MS)
     }
 
@@ -205,8 +209,10 @@ useEffect(() => {
       if (firstMissingReveal) {
         setIsMissingLetterMessage(firstMissingReveal)
         setIsMissingPreviousLetters(true)
+        setCurrentRowClass('jiggle')
         return setTimeout(() => {
           setIsMissingPreviousLetters(false)
+          setCurrentRowClass('')
         }, ALERT_TIME_MS)
       }
     }
