@@ -8,10 +8,9 @@ type Props = {
 export const CurrentRow = ({ guess }: Props) => {
   const splitGuess = guess.split('')
   const emptyCells = Array.from(Array(MAX_WORD_LENGTH - splitGuess.length))
-  const classes = `flex justify-center mb-1 ${className}`
 
   return (
-    <div className={classes}>
+    <div className="flex justify-center mb-1">
       {splitGuess.map((letter, i) => (
         <Cell key={i} value={letter} />
       ))}

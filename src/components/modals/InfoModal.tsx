@@ -3,10 +3,7 @@ import { BaseModal } from './BaseModal'
 import {
   InformationCircleIcon,
   ChartBarIcon,
-  SunIcon,
-  MoonIcon,
-  CakeIcon,
-  AcademicCapIcon,
+  CogIcon,
 } from '@heroicons/react/outline'
 
 type Props = {
@@ -59,30 +56,6 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
 	    <p className="text-sm text-gray-500 dark:text-gray-300">
-	      <MoonIcon className="h-6 w-6 mr-2 cursor-pointer" />  
-	        Activa modo oscuro
-        </p>
-	  </div>
-	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-	    <p className="text-sm text-gray-500 dark:text-gray-300">
-          <SunIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	        Activa modo claro
-        </p>
-      </div>
-	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-        <p className="text-sm text-gray-500 dark:text-gray-300">
-	      <AcademicCapIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	        Activa modo fácil
-        </p>
-	  </div>
-	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-        <p className="text-sm text-gray-500 dark:text-gray-300">
-          <CakeIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	        Activa modo difícil
-        </p>
-	  </div>
-	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-	    <p className="text-sm text-gray-500 dark:text-gray-300">
           <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	        Despliega información sobre como jugar
 	   </p>
@@ -91,6 +64,13 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
        <p className="text-sm text-gray-500 dark:text-gray-300">
           <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Despliega estadísticas del juego
+	   </p>
+	 </div>
+    </BaseModal>
+    <div className="flex justify-left align-middle mb-1 mt-4 items-center">
+       <p className="text-sm text-gray-500 dark:text-gray-300">
+          <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
+	        Configuraciones del juego como modo fácil/difícil, modo claro/oscuro, modo normal/alto contraste.
 	   </p>
 	 </div>
     </BaseModal>

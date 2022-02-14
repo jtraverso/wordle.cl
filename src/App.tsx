@@ -1,10 +1,7 @@
 import {
   InformationCircleIcon,
   ChartBarIcon,
-  SunIcon,
-  MoonIcon,
-  CakeIcon,
-  AcademicCapIcon,
+  CogIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -13,7 +10,7 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { AboutModal } from './components/modals/AboutModal'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
-import { SocialButtons } from './components/modals/SocialButtons'
+import { SettingsModal } from './components/modals/SettingsModal'
 import {
   GAME_TITLE,
   WIN_MESSAGES,
@@ -41,6 +38,8 @@ import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
+  setStoredIsHighContrastMode,
+  getStoredIsHighContrastMode,
 } from './lib/localStorage'
 
 import './App.css'
@@ -56,7 +55,10 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
+  const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
+  const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
@@ -64,6 +66,9 @@ function App() {
       : prefersDarkMode
       ? true
       : false
+  )
+  const [isHighContrastMode, setIsHighContrastMode] = useState(
+    getStoredIsHighContrastMode()
   )
   const [successAlert, setSuccessAlert] = useState('')
   const [isRevealing, setIsRevealing] = useState(false)
@@ -102,13 +107,19 @@ function App() {
     }
   }, [stats])
 
-  useEffect(() => {
+useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [isDarkMode])
+
+    if (isHighContrastMode) {
+      document.documentElement.classList.add('high-contrast')
+    } else {
+      document.documentElement.classList.remove('high-contrast')
+    }
+  }, [isDarkMode, isHighContrastMode])
 
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
@@ -116,8 +127,20 @@ function App() {
   }
 
   const handleHardMode = (isHard: boolean) => {
-    setIsHardMode(isHard)
-    localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    if (guesses.length === 0 || localStorage.getItem('gameMode') === 'hard') {
+      setIsHardMode(isHard)
+      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    } else {
+      setIsHardModeAlertOpen(true)
+      return setTimeout(() => {
+        setIsHardModeAlertOpen(false)
+      }, ALERT_TIME_MS)
+    }
+  }
+
+  const handleHighContrastMode = (isHighContrast: boolean) => {
+    setIsHighContrastMode(isHighContrast)
+    setStoredIsHighContrastMode(isHighContrast)
   }
 
   useEffect(() => {
@@ -223,28 +246,6 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        {isHardMode ? (
-          <AcademicCapIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
-          />
-        ) : (
-          <CakeIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
-          />
-        )}
-        {isDarkMode ? (
-          <SunIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-            onClick={() => handleDarkMode(!isDarkMode)}
-          />
-        ) : (
-          <MoonIcon
-            className="h-6 w-6 mr-2 cursor-pointer"
-            onClick={() => handleDarkMode(!isDarkMode)}
-          />
-        )}
         <InformationCircleIcon
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
@@ -253,11 +254,16 @@ function App() {
           className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
+		<CogIcon
+          className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+          onClick={() => setIsSettingsModalOpen(true)}
+        />
       </div>
       <Grid
         guesses={guesses}
         currentGuess={currentGuess}
         isRevealing={isRevealing}
+		currentRowClassName={currentRowClass}
       />
       <Keyboard
         onChar={onChar}
@@ -286,6 +292,17 @@ function App() {
       <AboutModal
         isOpen={isAboutModalOpen}
         handleClose={() => setIsAboutModalOpen(false)}
+      />
+	  <SettingsModal
+        isOpen={isSettingsModalOpen}
+        handleClose={() => setIsSettingsModalOpen(false)}
+        isHardMode={isHardMode}
+        handleHardMode={handleHardMode}
+        isDarkMode={isDarkMode}
+        handleDarkMode={handleDarkMode}
+        isHardModeErrorModalOpen={isHardModeAlertOpen}
+        isHighContrastMode={isHighContrastMode}
+        handleHighContrastMode={handleHighContrastMode}
       />
 	  
 	  <div className="flex">
@@ -324,6 +341,7 @@ function App() {
         message={successAlert}
         isOpen={successAlert !== ''}
         variant="success"
+        topMost={true}
       />
     </div>
   )

@@ -130,6 +130,7 @@ export const WORDS = [
 'maite',
 'yerba',
 'porro',
+'tonka',
 'lider',
 'huevo',
 'ancud',
