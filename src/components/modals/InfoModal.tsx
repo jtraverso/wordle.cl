@@ -61,15 +61,15 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 	    </p>
 	 </div>
 	 <div className="flex justify-left align-left mb-1 mt-4 items-left">
+	   <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
            <p className="text-sm text-gray-500 dark:text-gray-300">
-             <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Despliega estadísticas del juego
 	   </p>
 	 </div>
        <div className="flex justify-left align-left mb-1 mt-4 items-left">
-         <p className="text-sm text-gray-500 dark:text-gray-300">
-           <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
-	        Configuraciones del juego como modo fácil/difícil y claro/oscuro.
+         <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
+           <p className="text-sm text-gray-500 dark:text-gray-300">
+	        Configuraciones como modo fácil/difícil y claro/oscuro
 	 </p>
        </div>
     </BaseModal>
