@@ -3,9 +3,10 @@ import { Cell } from './Cell'
 
 type Props = {
   guess: string
+  className: string
 }
 
-export const CurrentRow = ({ guess }: Props) => {
+export const CurrentRow = ({ guess, className }: Props) => {
   const splitGuess = guess.split('')
   const emptyCells = Array.from(Array(MAX_WORD_LENGTH - splitGuess.length))
   const classes = `flex justify-center mb-1 ${className}`
