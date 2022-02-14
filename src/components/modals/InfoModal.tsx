@@ -56,23 +56,22 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 	  <div className="flex justify-left align-middle mb-1 mt-4 items-center">
 	    <p className="text-sm text-gray-500 dark:text-gray-300">
-          <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
+              <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	        Despliega información sobre como jugar
 	   </p>
 	 </div>
 	 <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-       <p className="text-sm text-gray-500 dark:text-gray-300">
-          <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
+           <p className="text-sm text-gray-500 dark:text-gray-300">
+             <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Despliega estadísticas del juego
 	   </p>
 	 </div>
-    </BaseModal>
-    <div className="flex justify-left align-middle mb-1 mt-4 items-center">
-       <p className="text-sm text-gray-500 dark:text-gray-300">
-          <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
+       <div className="flex justify-left align-middle mb-1 mt-4 items-center">
+         <p className="text-sm text-gray-500 dark:text-gray-300">
+           <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Configuraciones del juego como modo fácil/difícil, modo claro/oscuro, modo normal/alto contraste.
-	   </p>
-	 </div>
+	 </p>
+       </div>
     </BaseModal>
   )
 }
