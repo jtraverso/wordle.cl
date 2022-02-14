@@ -54,19 +54,19 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 	  <p className="text-base text-gray-900 font-meduim dark:text-gray-100">
 	      Leyenda
       </p>
-	  <div className="flex justify-left align-middle mb-1 mt-4 items-left">
+	  <div className="flex justify-left align-left mb-1 mt-4 items-left">
+            <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	    <p className="text-sm text-gray-500 dark:text-gray-300">
-              <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
 	        Despliega información sobre como jugar
-	   </p>
+	    </p>
 	 </div>
-	 <div className="flex justify-left align-middle mb-1 mt-4 items-left">
+	 <div className="flex justify-left align-left mb-1 mt-4 items-left">
            <p className="text-sm text-gray-500 dark:text-gray-300">
              <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Despliega estadísticas del juego
 	   </p>
 	 </div>
-       <div className="flex justify-left align-middle mb-1 mt-4 items-left">
+       <div className="flex justify-left align-left mb-1 mt-4 items-left">
          <p className="text-sm text-gray-500 dark:text-gray-300">
            <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
 	        Configuraciones del juego como modo fácil/difícil y claro/oscuro.
