@@ -35,6 +35,7 @@ export const loadStatsFromLocalStorage = () => {
   return stats ? (JSON.parse(stats) as GameStats) : null
 }
 
+
 export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
   if (isHighContrast) {
     localStorage.setItem(highContrastKey, '1')
@@ -44,6 +45,7 @@ export const setStoredIsHighContrastMode = (isHighContrast: boolean) => {
 }
 
 export const getStoredIsHighContrastMode = () => {
+  localStorage.setItem(highContrastKey, '1') // siempre activo
   const highContrast = localStorage.getItem(highContrastKey)
   return highContrast === '1'
 }
