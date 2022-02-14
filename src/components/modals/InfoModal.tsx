@@ -69,7 +69,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
        <div className="flex justify-left align-middle mb-1 mt-4 items-center">
          <p className="text-sm text-gray-500 dark:text-gray-300">
            <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
-	        Configuraciones del juego como modo fácil/difícil, modo claro/oscuro, modo normal/alto contraste.
+	        Configuraciones del juego como modo fácil/difícil y modo claro/oscuro.
 	 </p>
        </div>
     </BaseModal>
