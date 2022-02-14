@@ -16,7 +16,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     <BaseModal title="Como jugar" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Tienes 6 intentos para adivinar la palabra (incluye ciudades, comunas, modismos y otras expresiones y formas de hablar típicas chilenas ej: "PASAO en vez de PASADO").
-        <br/>Después de cada intento cada celda cambiará según que tan cerca estuviste.
+        <br/><br/>Después de cada intento cada celda cambiará según que tan cerca estuviste.
       </p>
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="C" status="correct" />
@@ -56,19 +56,19 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 	  <div className="flex justify-left align-left mb-1 mt-4 items-left">
             <InformationCircleIcon className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white" />
-	    <p className="text-sm text-gray-500 dark:text-gray-300">
+	    <p className="text-sm text-left text-gray-500 dark:text-gray-300">
 	        Despliega información sobre como jugar
 	    </p>
 	 </div>
 	 <div className="flex justify-left align-left mb-1 mt-4 items-left">
 	   <ChartBarIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
-           <p className="text-sm text-gray-500 dark:text-gray-300">
+           <p className="text-sm text-left text-gray-500 dark:text-gray-300">
 	        Despliega estadísticas del juego
 	   </p>
 	 </div>
        <div className="flex justify-left align-left mb-1 mt-4 items-left">
          <CogIcon className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white" />
-           <p className="text-sm text-gray-500 dark:text-gray-300">
+           <p className="text-sm text-left text-gray-500 dark:text-gray-300">
 	        Configuraciones como modo fácil/difícil y claro/oscuro
 	 </p>
        </div>
