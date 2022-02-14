@@ -36,10 +36,6 @@ export const Key = ({
         status === 'correct',
       'bg-sky-500 dark:bg-sky-700 text-white border-bg-sky-500 dark:border-bg-sky-700':
         status === 'present',
-	  'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
-        status === 'correct' && !isHighContrast,
-      'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white':
-        status === 'present' && !isHighContrast,
     }
   )
 
