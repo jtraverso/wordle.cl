@@ -1,6 +1,6 @@
 export const GAME_TITLE = 'WORDLE.CL'
 export const GAME_URL = 'https://www.wordle.cl'
-export const WIN_MESSAGES = ['¡Excelente!', '¡Increible!', '¡Bien Hecho!', '¡Eres Formidable!', '¡Sec@!','¡Bakan!','¡La Raja!','¡Impresionante','¡Te Pasaaaaaaste!' ]
+export const WIN_MESSAGES = ['¡Excelente!', '¡Increible!', '¡Bien Hecho!', '¡Eres Formidable!', '¡Sec@!','¡Bakan!','¡La Raja!','¡Impresionante!','¡Te Pasaaaaaaste!','¡Como lo hiciste!','¡Uff Buenísimo!']
 export const GAME_COPIED_MESSAGE = 'Copiado al portapeles'
 export const ABOUT_GAME_MESSAGE = 'Sobre wordle.cl'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'No hay suficientes letras'
