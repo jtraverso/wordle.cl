@@ -87,7 +87,7 @@ export const StatsModal = ({
                window.open= ('https://about.wordle.cl/' + {solution} + '.html' , "_blank")
              }}
           >
-          ¿Porqué {solution} es <img src="https://www.wordle.cl/logo192.png" width="32" height="32">
+          ¿Porqué {solution} es <img src="https://www.wordle.cl/logo192.png" width="32" height="32" />
           </button>
         </div>
         <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
