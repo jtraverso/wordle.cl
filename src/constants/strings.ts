@@ -27,3 +27,5 @@ export const HOW_TO_PLAY_TEXT = 'Como jugar'
 export const HARD_MODE_TEXT = '* Modo díficil activado'
 export const CL_TEXT = (solution: string) =>
   `¡Porque ${solution} es chileno?`
+export const ABOUT_LINK = (solution: string) =>
+  `https://about.wordle.cl/{solution}.html`
