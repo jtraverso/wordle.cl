@@ -25,3 +25,5 @@ export const CURRENT_STREAK_TEXT = 'Racha actual'
 export const BEST_STREAK_TEXT = 'Mejor racha'
 export const HOW_TO_PLAY_TEXT = 'Como jugar'
 export const HARD_MODE_TEXT = '* Modo díficil activado'
+export const CL_TEXT = (solution: string) =>
+  `¡Porque ${solution} es chileno?`
