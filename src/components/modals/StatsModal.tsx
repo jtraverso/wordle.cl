@@ -60,6 +60,18 @@ export const StatsModal = ({
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
 	  <div>
+	 <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
+	  <button
+            type="button"
+            className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-500 text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm"
+	    onClick={() => {
+    		const url = ABOUT_LINK(solution)
+    		window.open(url, '_blank')
+             }}
+          >
+          {CL_TEXT(solution)}
+          </button>
+        </div>
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
             <h5>{NEW_WORD_TEXT}</h5>
@@ -86,18 +98,6 @@ export const StatsModal = ({
 	    isGameLost = {isGameLost}
 	    isHardMode = {isHardMode}
 	 />
-        </div>
-        <div className="mt-5 sm:mt-6 columns-1 dark:text-white">
-	  <button
-            type="button"
-            className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-400 text-base font-medium text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:text-sm"
-	    onClick={() => {
-    		const url = ABOUT_LINK(solution)
-    		window.open(url, '_blank')
-             }}
-          >
-          {CL_TEXT(solution)}
-          </button>
         </div>
       </div>
       )}
