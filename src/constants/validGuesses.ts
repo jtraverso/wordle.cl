@@ -5077,7 +5077,7 @@ export const VALID_GUESSES = [
 'isaza',
 'isbas',
 'iscos',
-'iskia',
+'izkia',
 'islam',
 'islan',
 'islas',
