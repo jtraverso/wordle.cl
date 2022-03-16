@@ -147,7 +147,7 @@ export const WORDS = [
 'cagon',
 'elqui',
 'chuma',
-'iskia',
+'izkia',
 'chela',
 'puren',
 'leseo',
