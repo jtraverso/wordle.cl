@@ -33,8 +33,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="P" />
-        <Cell value="L" />
-        <Cell value="U" status="present" />
+        <Cell value="U" />
+        <Cell value="L" status="present" />
         <Cell value="G" />
         <Cell value="A" />
       </div>
