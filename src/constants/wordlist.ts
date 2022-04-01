@@ -182,7 +182,6 @@ export const WORDS = [
 'boche',
 'carpa',
 'boldo',
-'chupe',
 'webeo',
 'cacha',
 'cutre',
