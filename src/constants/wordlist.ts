@@ -1,5 +1,5 @@
 export const WORDS = [
-'zorra',
+'zorro',
 'pebre',
 'rengo',
 'volao',
@@ -229,7 +229,6 @@ export const WORDS = [
 'papas',
 'cueva',
 'rojas',
-'pluma',
 'patuo',
 'lolos',
 'muñoz',
