@@ -234,7 +234,6 @@ export const WORDS = [
 'muñoz',
 'micro',
 'lucas',
-'viaje',
 'yesca',
 'chato',
 'rabel',
