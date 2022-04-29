@@ -11,7 +11,7 @@ import {
   GUESS_DISTRIBUTION_TEXT,
   NEW_WORD_TEXT,
   SHARE_TEXT,
-  //CL_TEXT,
+  CL_TEXT,
   ABOUT_LINK,
 } from '../../constants/strings'
 
@@ -73,7 +73,7 @@ export const StatsModal = ({
           {CL_TEXT(solution)}
           </button>
         </div>
-	/*
+	*/
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
             <h5>{NEW_WORD_TEXT}</h5>
