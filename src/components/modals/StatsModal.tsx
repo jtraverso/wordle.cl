@@ -3,7 +3,8 @@ import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus, shareText } from '../../lib/share'
-import { solution, tomorrow } from '../../lib/words'
+//import { solution } from '../../lib/words'
+import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {InlineShareButtons} from 'sharethis-reactjs'
 import {
@@ -11,8 +12,8 @@ import {
   GUESS_DISTRIBUTION_TEXT,
   NEW_WORD_TEXT,
   SHARE_TEXT,
-  CL_TEXT,
-  ABOUT_LINK,
+  //CL_TEXT,
+  //ABOUT_LINK,
 } from '../../constants/strings'
 
 type Props = {
